@@ -8,7 +8,7 @@ import { RecoilRoot } from "recoil";
 const App = () => {
   return (
     <RecoilRoot>
-      <Router>
+      <Router basename="/">
         <Header />
         <Switch>
           <Route exact path="/" component={Catalog} />
