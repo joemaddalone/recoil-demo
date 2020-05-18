@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useRecoilValue } from 'recoil';
+import { cartState } from '../store';
 
 const Header = () => {
-  const totalQty = 1;
+  const { totalQty } = useRecoilValue(cartState);
   return (
     <div className="header">
       <div>

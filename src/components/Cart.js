@@ -1,12 +1,11 @@
 import React from "react";
 import CartButtons from "./CartButtons";
+import { useRecoilValue } from "recoil";
+import { cart, cartState } from "../store";
 
 const Cart = () => {
-  const cartItems = [
-    { id: "apple", price: 1, qty: 2 },
-    { id: "pear", price: 1, qty: 2 },
-  ];
-  const totalCost = 4;
+  const cartItems = useRecoilValue(cart);
+  const { totalCost } = useRecoilValue(cartState);
   return (
     <table className="cart">
       <thead>

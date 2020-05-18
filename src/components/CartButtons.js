@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useAddItem, useDecreaseItem, useRemoveItem } from "../store";
 
 const CartButtons = ({ item }) => {
-  const add = (item) => console.log("add", item);
-  const remove = (item) => console.log("remove", item);
-  const decrease = (item) => console.log("decrease", item);
+  const add = useAddItem();
+  const remove = useRemoveItem();
+  const decrease = useDecreaseItem();
   return (
     <div className="ui buttons mini">
       <button onClick={() => decrease(item)} className="ui button">

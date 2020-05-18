@@ -1,4 +1,5 @@
 import React from "react";
+import { useAddItem } from '../store';
 const ids = [
   "apple",
   "orange",
@@ -16,7 +17,7 @@ const ids = [
 const products = ids.map((id, index) => ({ id, price: index + 1 }));
 
 const Catalog = () => {
-  const addItem = (item) => console.log("add", item);
+  const addItem = useAddItem();
   return (
     <div className="catalog">
       <div className="products">
