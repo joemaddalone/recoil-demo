@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "318991d3d7d23335a6bb12227b234a00",
+    "revision": "986105a7afb47eee89b36df2ec0427d4",
     "url": "/recoil-demo/index.html"
   },
   {
-    "revision": "7b5906ba5ba9f5818230",
+    "revision": "4620b02c27ad83a4b985",
     "url": "/recoil-demo/static/css/main.959741b9.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/recoil-demo/static/js/2.856ce69f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7b5906ba5ba9f5818230",
-    "url": "/recoil-demo/static/js/main.cf52a269.chunk.js"
+    "revision": "4620b02c27ad83a4b985",
+    "url": "/recoil-demo/static/js/main.e2ad3389.chunk.js"
   },
   {
     "revision": "25a2cd8a31b3fc276a77",
