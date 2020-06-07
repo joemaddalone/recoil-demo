@@ -5,7 +5,12 @@ import { cart, cartState } from "../store";
 
 const Cart = () => {
   const cartItems = useRecoilValue(cart);
-  const { totalCost } = useRecoilValue(cartState);
+  const {
+    totalCost,
+    discountTotal,
+    discountAmount,
+    discountValue,
+  } = useRecoilValue(cartState("diamond"));
   return (
     <table className="cart">
       <thead>
@@ -24,7 +29,7 @@ const Cart = () => {
               <CartButtons item={item} />
             </td>
             <td>{item.id}</td>
-            <td>{item.price}</td>
+            <td>${item.price}</td>
             <td>{item.qty}</td>
             <td>${item.qty * item.price}</td>
           </tr>
@@ -35,6 +40,24 @@ const Cart = () => {
           </td>
           <td>${totalCost}</td>
         </tr>
+        {discountAmount > 0 && (
+          <>
+            <tr>
+              <td colSpan="4" style={{ textAlign: "right" }}>
+                Discount:
+              </td>
+              <td>
+                -${discountAmount} ({discountValue * 100}%)
+              </td>
+            </tr>
+            <tr>
+              <td colSpan="4" style={{ textAlign: "right" }}>
+                Discounted total:
+              </td>
+              <td>${discountTotal}</td>
+            </tr>
+          </>
+        )}
       </tbody>
     </table>
   );

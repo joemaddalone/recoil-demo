@@ -4,7 +4,7 @@ import { useRecoilValue } from 'recoil';
 import { cartState } from '../store';
 
 const Header = () => {
-  const { totalQty } = useRecoilValue(cartState);
+  const { totalQty } = useRecoilValue(cartState());
   return (
     <div className="header">
       <div>
